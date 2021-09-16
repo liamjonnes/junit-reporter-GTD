@@ -1,0 +1,58 @@
+{
+  "name": "junit-report-merger",
+  "version": "3.0.2",
+  "description": "Merges multiple JUnit XML reports into one.",
+  "main": "index.js",
+  "bin": {
+    "junit-report-merger": "./cli.js",
+    "jrm": "./cli.js"
+  },
+  "files": [
+    "typings",
+    "index.js",
+    "cli.js",
+    "src/**/*.js"
+  ],
+  "types": "typings/index.d.ts",
+  "scripts": {
+    "format": "prettier --write '**/*.{ts,tsx,js,jsx,css,md,yml}'",
+    "prepublishOnly": "npm run typings",
+    "test": "jest --coverage",
+    "typings": "tsc index.js --declaration --allowJs --emitDeclarationOnly --outDir typings"
+  },
+  "dependencies": {
+    "fast-glob": "3.2.7",
+    "xmlbuilder2": "3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhovhannes/junit-report-merger.git"
+  },
+  "keywords": [
+    "junit",
+    "xml",
+    "cypress",
+    "report",
+    "test",
+    "result",
+    "merge",
+    "combine"
+  ],
+  "author": "Hovhannes Babayan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bhovhannes/junit-report-merger/issues"
+  },
+  "homepage": "https://github.com/bhovhannes/junit-report-merger#readme",
+  "devDependencies": {
+    "@arkweid/lefthook": "0.7.6",
+    "@bhovhannes/shared-config": "0.0.1",
+    "@jest/globals": "27.1.0",
+    "jest": "27.1.0",
+    "prettier": "2.3.2",
+    "typescript": "4.4.2"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}
